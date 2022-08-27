@@ -1,0 +1,34 @@
+// GET ALL
+GET http://localhost:5000/api/usuarios
+
+###
+// CREATE
+POST http://localhost:5000/api/usuarios
+Content-Type: application/json
+
+{
+    "nombre": "usuarioTest5",
+    "direccion": "Direccion usuario Test 5",
+    "telefono": "123456789",
+    "email": "usuarioTest5@email.com" 
+}
+
+###
+// GET BY ID
+GET http://localhost:5000/api/usuarios/1
+
+###
+// UPDATE
+PUT http://localhost:5000/api/usuarios/1
+Content-Type: application/json
+
+{
+    "nombre": "usuarioTestEdit1",
+    "direccion": "Direccion usuario Test edited 1",
+    "telefono": "123456789",
+    "email": "usuarioEdited1@email.com"
+}
+
+###
+// DELETE
+DELETE http://localhost:5000/api/usuarios/2

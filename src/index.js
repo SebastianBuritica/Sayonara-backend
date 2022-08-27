@@ -20,12 +20,12 @@ import { sequelize } from "./database/database.js";
 
 // When we dont have any tables in the database we will use the sync method to create the tables, by using the 
 // structure that we set up in our schemas, after creating the first one of each we can comment it out
-import './models/Usuario.js';
-import './models/Orden.js';
-import './models/Producto.js';
+// import './models/Usuario.js';
+// import './models/Orden.js';
+// import './models/Producto.js';
 
 async function main() {
-    await sequelize.sync({ force: true });
+    await sequelize.sync({ force: false });
     app.listen(5000)
     console.log("Servidor corriendo en puerto 5000");
 }

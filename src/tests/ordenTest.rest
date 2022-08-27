@@ -1,0 +1,29 @@
+// GET ALL
+GET http://localhost:5000/api/ordenes
+
+###
+// CREATE
+POST http://localhost:5000/api/ordenes
+Content-Type: application/json
+
+{
+    "usuarioId": 4,
+    "estado": "Pendiente"
+}
+
+###
+// GET BY ID
+GET http://localhost:5000/api/ordenes/2
+
+###
+// UPDATE
+PUT http://localhost:5000/api/ordenes/1
+Content-Type: application/json
+
+{
+    "estado": "Pendiente editado"
+}
+
+###
+// DELETE
+DELETE http://localhost:5000/api/ordenes/10
