@@ -1,5 +1,7 @@
 // Importamos nuestro modelo de Usuario
+import { Orden } from "../models/Orden.js";
 import { Usuario } from "../models/Usuario.js";
+import { Producto } from "../models/Producto.js";
 
 // Creamos una funcion para obtener todas los usuarios
 export async function getUsuarios(req, res) {
@@ -73,6 +75,34 @@ export async function deleteUsuario(req, res) {
             where: { id },
         });
         return res.json({ message: 'Usuario eliminada exitosamente' });
+    } catch (error) {
+        return res.status(500).json({ message: error.message });
+    }
+}
+
+// Creamos una funcion para obtener las ordenes de un usuario
+export async function getUsuarioOrdenes(req, res) {
+    const { id } = req.params;
+    try {
+        const ordenes = await Orden.findAll({
+            attributes: ['id', 'usuarioId', 'estado'],
+            where: { usuarioId: id },
+        });
+        res.json(ordenes);
+    } catch (error) {
+        return res.status(500).json({ message: error.message });
+    }
+}
+
+// Creamos una funcion para obtener los productos de un usuario
+export async function getUsuarioProductos(req, res) {
+    const { id } = req.params;
+    try {
+        const productos = await Producto.findAll({
+            attributes: ['id', 'usuarioId', 'ordenId', 'nombre', 'precio', 'descripcion'],
+            where: { usuarioId: id },
+        });
+        res.json(productos);
     } catch (error) {
         return res.status(500).json({ message: error.message });
     }

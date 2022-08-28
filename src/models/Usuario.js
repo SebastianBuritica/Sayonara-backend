@@ -6,7 +6,10 @@ import { sequelize } from "../database/database.js";
 
 // Vamos a importar nuestros modelos Orden y Producto para crear la relacion entre las tablas
 import { Orden } from "./Orden.js";
+
+// Vamos a importar nuestro modelo de Producto
 import { Producto } from "./Producto.js";
+
 
 // Vamos a crear nuestro schema de la tabla Usuario
 export const Usuario = sequelize.define(
@@ -43,14 +46,16 @@ export const Usuario = sequelize.define(
     sourceKey: "id"
  });
 
- // Definimos la relacion con ordenes
+//  // Definimos la relacion con ordenes
  Orden.belongsTo(Usuario, { foreignKey: "usuarioId", targetId: "id" });
 
 
- // Definimos la relacion con productos
- Usuario.hasMany(Producto, {
+ // Asociamos el modelo de Producto a la tabla usuario
+Usuario.hasMany(Producto, {
     foreignKey: "usuarioId",
     sourceKey: "id"
- })
+})
 
- Producto.belongsTo(Usuario, { foreignKey: "usuarioId", targetId: "id" });
+// Definimos la relacion con productos
+Producto.belongsTo(Orden, { foreignKey: "usuarioId", targetId: "id" });
+ 

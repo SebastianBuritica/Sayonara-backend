@@ -1,5 +1,5 @@
 // Importamos nuestro modelo de producto
-import { Producto } from "../models/producto.js";
+import { Producto } from "../models/Producto.js";
 
 // Creamos una funcion para obtener todos los productos
 export async function getProductos(req, res) {

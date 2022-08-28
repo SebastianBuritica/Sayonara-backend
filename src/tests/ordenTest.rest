@@ -7,8 +7,8 @@ POST http://localhost:5000/api/ordenes
 Content-Type: application/json
 
 {
-    "usuarioId": 4,
-    "estado": "Pendiente"
+    "usuarioId": "5",
+    "estado": "Testing3"
 }
 
 ###
@@ -21,7 +21,7 @@ PUT http://localhost:5000/api/ordenes/1
 Content-Type: application/json
 
 {
-    "estado": "Pendiente editado"
+    "estado": "Testing1 editado"
 }
 
 ###
