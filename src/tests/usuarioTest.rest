@@ -7,10 +7,10 @@ POST http://localhost:5000/api/usuarios
 Content-Type: application/json
 
 {
-    "nombre": "usuarioTest5",
-    "direccion": "Direccion usuario Test 5",
+    "nombre": "usuarioTest3",
+    "direccion": "Direccion usuario Test 3",
     "telefono": "123456789",
-    "email": "usuarioTest5@email.com" 
+    "email": "usuarioTest3@email.com" 
 }
 
 ###
@@ -31,4 +31,13 @@ Content-Type: application/json
 
 ###
 // DELETE
-DELETE http://localhost:5000/api/usuarios/1
+DELETE http://localhost:5000/api/usuarios/2
+
+
+###
+// GET ORDERS BY USER ID
+GET http://localhost:5000/api/usuarios/4/ordenes
+
+###
+// GET PRODUCTS BY USER ID
+GET http://localhost:5000/api/usuarios/3/productos

@@ -7,11 +7,11 @@ POST http://localhost:5000/api/productos
 Content-Type: application/json
 
 {
-    "usuarioId": "1",
-    "ordenId": "2",
-    "nombre": "productoTest4",
-    "precio": "2900",
-    "descripcion": "Test 4 producto"
+    "usuarioId": "5",
+    "ordenId": "7",
+    "nombre": "productoTest3",
+    "precio": "2100",
+    "descripcion": "Test 1 producto"
 }
 
 ###
