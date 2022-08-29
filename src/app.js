@@ -16,7 +16,7 @@ app.use(cors());
 import usuariosRoutes from './routes/usuarios.routes.js';
 import ordenesRoutes from './routes/ordenes.routes.js';
 import productosRoutes from './routes/productos.routes.js';
-import userRoutes from './routes/users.routes.js';
+
 
 // Para manipular la data en formato JSON
 app.use(express.json());
@@ -25,6 +25,6 @@ app.use(express.json());
 app.use('/api/usuarios', usuariosRoutes);
 app.use('/api/ordenes', ordenesRoutes);
 app.use('/api/productos', productosRoutes);
-app.use('/api/auth', userRoutes);
+
 
 export default app;
