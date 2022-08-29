@@ -1,7 +1,7 @@
 # Sayonara-backend
 
 Creacion de servidor utilizando express js como libreria de nodejs, la cual proporciona completa funcionalidad para realizar peticiones HTTP (CRUD) a una base de 
-datos relacional (postgreSQL) en la cual se establecieron asociaciones entre las diferentes tablas. 
+datos relacional (postgreSQL) en la cual se establecieron asociaciones entre las diferentes tablas, por ende habilitando el consumo del restful api por parte de un frontend. 
 
 ## NPM RUN DEV
 Runs the app in the development mode.
